@@ -88,6 +88,21 @@ footer{border-top:1px solid var(--border);background:var(--black);padding:32px 6
 .ft-wm{display:flex;flex-direction:column;gap:2px;line-height:1}
 .ft-brand{font-family:var(--serif);font-size:17px;font-weight:600;letter-spacing:.04em;color:var(--white)}
 .ft-sub{font-size:8px;font-weight:700;letter-spacing:.26em;text-transform:uppercase;background:linear-gradient(90deg,var(--c1),var(--c2),var(--c3));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.ex-vid{margin-top:48px;padding-top:40px;border-top:1px solid var(--border)}.ex-vid-lbl{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-bottom:16px;display:flex;align-items:center;gap:12px}.ex-vid-lbl::before{content:"";width:20px;height:1px;background:linear-gradient(90deg,var(--c1),transparent);display:block}.ex-vid-wrap{position:relative;aspect-ratio:16/9;overflow:hidden;border:1px solid var(--border);border-radius:2px}.ex-vid-wrap iframe{position:absolute;inset:0;width:100%;height:100%;border:none}.ex-vid-note{font-size:12px;color:var(--muted);margin-top:10px;font-style:italic}
+/* blog example video card - click to watch */
+.yt-card{position:relative;aspect-ratio:16/9;border:1px solid var(--border);border-radius:2px;overflow:hidden;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .35s}
+.yt-card-bg{position:absolute;inset:0;transition:transform .4s}
+.yt-card:hover .yt-card-bg{transform:scale(1.04)}
+.yt-card-overlay{position:absolute;inset:0;background:rgba(0,0,0,0.42);transition:background .35s}
+.yt-card:hover .yt-card-overlay{background:rgba(0,0,0,0.28)}
+.yt-card-inner{position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;gap:14px;text-align:center;padding:24px}
+.yt-play{width:64px;height:64px;background:rgba(255,255,255,0.95);border-radius:50%;display:flex;align-items:center;justify-content:center;transition:all .3s;box-shadow:0 4px 24px rgba(0,0,0,0.3)}
+.yt-card:hover .yt-play{transform:scale(1.1);background:var(--white)}
+.yt-play svg{fill:#0a0a0a;margin-left:4px}
+.yt-card-title{font-family:var(--serif);font-size:18px;font-weight:300;color:var(--white);line-height:1.3}
+.yt-card-cta{font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,0.6)}
+.yt-card-logo{position:absolute;bottom:14px;right:14px;background:rgba(255,0,0,0.85);color:white;font-size:9px;font-weight:700;letter-spacing:.1em;padding:3px 8px;border-radius:3px;z-index:2}
+
 .ft-cp{font-size:11px;color:rgba(255,255,255,.3)}
 .ft-lk{display:flex;gap:20px}
 .ft-lk a{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.3);text-decoration:none;transition:color .3s}
@@ -119,13 +134,13 @@ footer{border-top:1px solid var(--border);background:var(--black);padding:32px 6
 <canvas id="aur"></canvas>
 
 <nav>
-  <a href="index.html" class="logo-a">
+  <a href="https://anasbinmehboob.github.io/brandier-studio/" class="logo-a">
     <div class="logo-wm">
       <span class="logo-brand">Brandier</span>
       <span class="logo-sub">AI &nbsp;&nbsp;Studio</span>
     </div>
   </a>
-  <a href="index.html" class="nav-back">← Back to Studio</a>
+  <a href="https://anasbinmehboob.github.io/brandier-studio/" class="nav-back">← Back to Studio</a>
 </nav>
 
 <!-- HERO -->
@@ -182,7 +197,21 @@ footer{border-top:1px solid var(--border);background:var(--black);padding:32px 6
     <p class="post-p">Skincare, supplements, apps, e-commerce products, SaaS tools, food & beverage, fashion. If your product solves a problem or improves someone's life, UGC is your most powerful format.</p>
     <div class="post-cta">
       <div class="post-cta-text">Ready to create your<br><em>Talking Head UGC ad?</em></div>
-      <a href="index.html#contact" class="post-cta-btn">Get Started →</a>
+      <a href="https://anasbinmehboob.github.io/brandier-studio/#contact" class="post-cta-btn">Get Started →</a>
+    </div>
+    <div class="ex-vid">
+      <div class="ex-vid-lbl">Real World Example</div>
+      <a href="https://www.youtube.com/watch?v=ZUG9qYTJMsI" target="_blank" class="yt-card">
+        <div class="yt-card-bg" style="background:linear-gradient(135deg,#1a0a0a,#2d1010,#1a0505);position:absolute;inset:0"></div>
+        <div class="yt-card-overlay"></div>
+        <div class="yt-card-inner">
+          <div class="yt-play"><svg width="22" height="22" viewBox="0 0 22 22"><path d="M5 3l14 8-14 8V3z"/></svg></div>
+          <div class="yt-card-title">Dollar Shave Club<br>— Original Ad</div>
+          <div class="yt-card-cta">Click to watch on YouTube →</div>
+        </div>
+        <div class="yt-card-logo">▶ YouTube</div>
+      </a>
+      <div class="ex-vid-note">One of the most iconic UGC-style ads ever made. Raw, real, and converted millions of viewers into customers.</div>
     </div>
   </div>
 </div>
@@ -215,7 +244,21 @@ footer{border-top:1px solid var(--border);background:var(--black);padding:32px 6
     </ul>
     <div class="post-cta">
       <div class="post-cta-text">Want an unboxing ad<br><em>that creates desire?</em></div>
-      <a href="index.html#contact" class="post-cta-btn">Get Started →</a>
+      <a href="https://anasbinmehboob.github.io/brandier-studio/#contact" class="post-cta-btn">Get Started →</a>
+    </div>
+    <div class="ex-vid">
+      <div class="ex-vid-lbl">Real World Example</div>
+      <a href="https://www.youtube.com/watch?v=a3Z7zEc7r28" target="_blank" class="yt-card">
+        <div class="yt-card-bg" style="background:linear-gradient(135deg,#0a0a10,#101020,#0a0a18);position:absolute;inset:0"></div>
+        <div class="yt-card-overlay"></div>
+        <div class="yt-card-inner">
+          <div class="yt-play"><svg width="22" height="22" viewBox="0 0 22 22"><path d="M5 3l14 8-14 8V3z"/></svg></div>
+          <div class="yt-card-title">Apple iPhone<br>Unboxing Experience</div>
+          <div class="yt-card-cta">Click to watch on YouTube →</div>
+        </div>
+        <div class="yt-card-logo">▶ YouTube</div>
+      </a>
+      <div class="ex-vid-note">The gold standard of product reveal. Pure anticipation, zero words needed. Every second builds desire.</div>
     </div>
   </div>
 </div>
@@ -247,7 +290,21 @@ footer{border-top:1px solid var(--border);background:var(--black);padding:32px 6
     </ul>
     <div class="post-cta">
       <div class="post-cta-text">Turn skeptics into buyers<br>with an <em>AI Review Ad</em></div>
-      <a href="index.html#contact" class="post-cta-btn">Get Started →</a>
+      <a href="https://anasbinmehboob.github.io/brandier-studio/#contact" class="post-cta-btn">Get Started →</a>
+    </div>
+    <div class="ex-vid">
+      <div class="ex-vid-lbl">Real World Example</div>
+      <a href="https://www.youtube.com/watch?v=owGykVbfgUE" target="_blank" class="yt-card">
+        <div class="yt-card-bg" style="background:linear-gradient(135deg,#0f0a00,#201500,#150f00);position:absolute;inset:0"></div>
+        <div class="yt-card-overlay"></div>
+        <div class="yt-card-inner">
+          <div class="yt-play"><svg width="22" height="22" viewBox="0 0 22 22"><path d="M5 3l14 8-14 8V3z"/></svg></div>
+          <div class="yt-card-title">Old Spice<br>— The Man Your Man Could Smell Like</div>
+          <div class="yt-card-cta">Click to watch on YouTube →</div>
+        </div>
+        <div class="yt-card-logo">▶ YouTube</div>
+      </a>
+      <div class="ex-vid-note">A product review format done with unforgettable personality. Humor + confidence = instant brand recall.</div>
     </div>
   </div>
 </div>
@@ -279,7 +336,21 @@ footer{border-top:1px solid var(--border);background:var(--black);padding:32px 6
     </ul>
     <div class="post-cta">
       <div class="post-cta-text">Become the authority<br>with an <em>AI Tutorial Ad</em></div>
-      <a href="index.html#contact" class="post-cta-btn">Get Started →</a>
+      <a href="https://anasbinmehboob.github.io/brandier-studio/#contact" class="post-cta-btn">Get Started →</a>
+    </div>
+    <div class="ex-vid">
+      <div class="ex-vid-lbl">Real World Example</div>
+      <a href="https://www.youtube.com/watch?v=USmOHwGGfDo" target="_blank" class="yt-card">
+        <div class="yt-card-bg" style="background:linear-gradient(135deg,#001a0a,#002a10,#001508);position:absolute;inset:0"></div>
+        <div class="yt-card-overlay"></div>
+        <div class="yt-card-inner">
+          <div class="yt-play"><svg width="22" height="22" viewBox="0 0 22 22"><path d="M5 3l14 8-14 8V3z"/></svg></div>
+          <div class="yt-card-title">Tutorial-Style Ad<br>— Product in Action</div>
+          <div class="yt-card-cta">Click to watch on YouTube →</div>
+        </div>
+        <div class="yt-card-logo">▶ YouTube</div>
+      </a>
+      <div class="ex-vid-note">Educate first, sell second. The formula that builds lifelong customers instead of one-time buyers.</div>
     </div>
   </div>
 </div>
@@ -312,7 +383,21 @@ footer{border-top:1px solid var(--border);background:var(--black);padding:32px 6
     </ul>
     <div class="post-cta">
       <div class="post-cta-text">Let customers <em>see themselves</em><br>in your product</div>
-      <a href="index.html#contact" class="post-cta-btn">Get Started →</a>
+      <a href="https://anasbinmehboob.github.io/brandier-studio/#contact" class="post-cta-btn">Get Started →</a>
+    </div>
+    <div class="ex-vid">
+      <div class="ex-vid-lbl">Real World Example</div>
+      <a href="https://www.youtube.com/watch?v=G-yn4pBCFDs" target="_blank" class="yt-card">
+        <div class="yt-card-bg" style="background:linear-gradient(135deg,#100020,#1a0035,#0d0020);position:absolute;inset:0"></div>
+        <div class="yt-card-overlay"></div>
+        <div class="yt-card-inner">
+          <div class="yt-play"><svg width="22" height="22" viewBox="0 0 22 22"><path d="M5 3l14 8-14 8V3z"/></svg></div>
+          <div class="yt-card-title">Virtual Try On<br>— See It Before You Buy It</div>
+          <div class="yt-card-cta">Click to watch on YouTube →</div>
+        </div>
+        <div class="yt-card-logo">▶ YouTube</div>
+      </a>
+      <div class="ex-vid-note">Showing customers exactly how a product looks before purchase. Eliminates doubt. Skyrockets conversion.</div>
     </div>
   </div>
 </div>
@@ -345,7 +430,21 @@ footer{border-top:1px solid var(--border);background:var(--black);padding:32px 6
     </ul>
     <div class="post-cta">
       <div class="post-cta-text">Elevate your brand with<br><em>Pro Try On</em></div>
-      <a href="index.html#contact" class="post-cta-btn">Get Started →</a>
+      <a href="https://anasbinmehboob.github.io/brandier-studio/#contact" class="post-cta-btn">Get Started →</a>
+    </div>
+    <div class="ex-vid">
+      <div class="ex-vid-lbl">Real World Example</div>
+      <a href="https://www.youtube.com/watch?v=HIyM5tKFyxo" target="_blank" class="yt-card">
+        <div class="yt-card-bg" style="background:linear-gradient(135deg,#0a0a0a,#1a1a1a,#0f0a10);position:absolute;inset:0"></div>
+        <div class="yt-card-overlay"></div>
+        <div class="yt-card-inner">
+          <div class="yt-play"><svg width="22" height="22" viewBox="0 0 22 22"><path d="M5 3l14 8-14 8V3z"/></svg></div>
+          <div class="yt-card-title">Luxury Fashion<br>Pro Try On Editorial</div>
+          <div class="yt-card-cta">Click to watch on YouTube →</div>
+        </div>
+        <div class="yt-card-logo">▶ YouTube</div>
+      </a>
+      <div class="ex-vid-note">Hollywood-grade production showing product in premium context. The difference between a photo and a Vogue editorial.</div>
     </div>
   </div>
 </div>
@@ -378,7 +477,21 @@ footer{border-top:1px solid var(--border);background:var(--black);padding:32px 6
     </ul>
     <div class="post-cta">
       <div class="post-cta-text">Make your brand<br><em>unforgettable</em></div>
-      <a href="index.html#contact" class="post-cta-btn">Get Started →</a>
+      <a href="https://anasbinmehboob.github.io/brandier-studio/#contact" class="post-cta-btn">Get Started →</a>
+    </div>
+    <div class="ex-vid">
+      <div class="ex-vid-lbl">Real World Example</div>
+      <a href="https://www.youtube.com/watch?v=1-MJy4cBMRg" target="_blank" class="yt-card">
+        <div class="yt-card-bg" style="background:linear-gradient(135deg,#000000,#0a0a0a,#050510);position:absolute;inset:0"></div>
+        <div class="yt-card-overlay"></div>
+        <div class="yt-card-inner">
+          <div class="yt-play"><svg width="22" height="22" viewBox="0 0 22 22"><path d="M5 3l14 8-14 8V3z"/></svg></div>
+          <div class="yt-card-title">Nike — Just Do It<br>TV Spot</div>
+          <div class="yt-card-cta">Click to watch on YouTube →</div>
+        </div>
+        <div class="yt-card-logo">▶ YouTube</div>
+      </a>
+      <div class="ex-vid-note">The benchmark of TV Spot advertising. Emotional, cinematic, unforgettable. Three words that built a billion-dollar brand.</div>
     </div>
   </div>
 </div>
@@ -411,7 +524,21 @@ footer{border-top:1px solid var(--border);background:var(--black);padding:32px 6
     </ul>
     <div class="post-cta">
       <div class="post-cta-text">Ready to do something<br><em>nobody's seen before?</em></div>
-      <a href="index.html#contact" class="post-cta-btn">Let's Talk →</a>
+      <a href="https://anasbinmehboob.github.io/brandier-studio/#contact" class="post-cta-btn">Let's Talk →</a>
+    </div>
+    <div class="ex-vid">
+      <div class="ex-vid-lbl">Real World Example</div>
+      <a href="https://www.youtube.com/watch?v=tLjRyBNpfhA" target="_blank" class="yt-card">
+        <div class="yt-card-bg" style="background:linear-gradient(135deg,#0a0500,#1a1000,#0f0a00);position:absolute;inset:0"></div>
+        <div class="yt-card-overlay"></div>
+        <div class="yt-card-inner">
+          <div class="yt-play"><svg width="22" height="22" viewBox="0 0 22 22"><path d="M5 3l14 8-14 8V3z"/></svg></div>
+          <div class="yt-card-title">Cadbury Gorilla<br>— Wild Card Classic</div>
+          <div class="yt-card-cta">Click to watch on YouTube →</div>
+        </div>
+        <div class="yt-card-logo">▶ YouTube</div>
+      </a>
+      <div class="ex-vid-note">A drum-playing gorilla sold chocolate. No rules. Pure instinct. Went viral before viral was even a thing.</div>
     </div>
   </div>
 </div>
@@ -419,7 +546,7 @@ footer{border-top:1px solid var(--border);background:var(--black);padding:32px 6
 </div><!-- end blog-section -->
 
 <footer>
-  <a href="index.html" class="ft-lg">
+  <a href="https://anasbinmehboob.github.io/brandier-studio/" class="ft-lg">
     <div class="ft-wm">
       <span class="ft-brand">Brandier</span>
       <span class="ft-sub">AI &nbsp;&nbsp;Studio</span>
@@ -427,9 +554,9 @@ footer{border-top:1px solid var(--border);background:var(--black);padding:32px 6
   </a>
   <span class="ft-cp">&copy; 2025 Brandier AI Studio · Anas Mehboob</span>
   <div class="ft-lk">
-    <a href="index.html">Home</a>
-    <a href="index.html#portfolio">Work</a>
-    <a href="index.html#contact">Contact</a>
+    <a href="https://anasbinmehboob.github.io/brandier-studio/">Home</a>
+    <a href="https://anasbinmehboob.github.io/brandier-studio/#portfolio">Work</a>
+    <a href="https://anasbinmehboob.github.io/brandier-studio/#contact">Contact</a>
     <a href="https://www.fiverr.com/s/akNbvQg" target="_blank">Fiverr ↗</a>
   </div>
 </footer>
